@@ -1,0 +1,24 @@
+{
+  "name": "@mattplays/bloonstd6-api",
+  "version": "0.0.1",
+  "description": "This package is a wrapper for the unofficial Bloons TD 6 API",
+  "main": "BloonsTD6API.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattPlays/BloonsTD6-API.git"
+  },
+  "keywords": [
+    "BloonsTD6",
+    "API",
+    "GameAPICenter"
+  ],
+  "author": "MattPlays (https://github.com/MattPlays/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MattPlays/BloonsTD6-API/issues"
+  },
+  "homepage": "https://github.com/MattPlays/BloonsTD6-API#readme"
+}
