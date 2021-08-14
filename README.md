@@ -1,7 +1,7 @@
 # BloonsTD6-API
 This package is a wrapper for the unofficial Bloons TD 6 API
 
-2. [Bloons TD 6](#bloonstd6)
+1. [Bloons TD 6](#bloonstd6)
     1. [Usage](#bloonstd6-usage)
     2. [Functions](#bloonstd6-functions)
         1. [GetAllTowers](#bloonstd6-getalltowers)
