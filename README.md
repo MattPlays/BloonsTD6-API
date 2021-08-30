@@ -34,8 +34,8 @@ This package is a wrapper for the unofficial Bloons TD 6 API
 **This is an Unoffical API** [Unoffical API Docs](https://statsnite.com/btd/api)
 ### Usage <a id="bloonstd6-usage">
 ```javascript
-const GameAPICenter = require("gameapicenter");
-const BloonsTD6API = new GameAPICenter.BloonsTD6API(); //No API Key Required
+const {BloonsTD6API} = require("@mattplays/bloonstd6-api");
+const BloonsTD6API = new BloonsTD6API(); //No API Key Required
 ```
 ### Functions <a id="bloonstd6-functions">
 #### GetAllTowers <a id="bloonstd6-getalltowers">
@@ -44,7 +44,7 @@ List all towers in BTD6
 The GetAllTowers function returns a `Promise<Tower[]>` type
 ##### Usage <a id="bloonstd6-getalltowers-usage">
 ```javascript
-const BloonsTD6API = new GameAPICenter.BloonsTD6API();
+const BloonsTD6API = new BloonsTD6API();
 BloonsTD6API.GetAllTowers().then((data) => {
 // Your Code Here :D
 });
@@ -62,7 +62,7 @@ export type TowerID = "dart-monkey" | "boomerang-monkey" | "bomb-shooter" | "tac
 The GetTowerByID function returns a `Promise<Tower>` type
 ##### Usage <a id="bloonstd6-gettowerbyid-usage">
 ```javascript
-const BloonsTD6API = new GameAPICenter.BloonsTD6API();
+const BloonsTD6API = new BloonsTD6API();
 BloonsTD6API.GetTowerByID("dart-monkey").then((data) => {
 // Your Code Here :D
 });
@@ -73,7 +73,7 @@ List all Heros in BTD6.
 The GetAllHeros function returns a `Promise<Hero[]>` type
 ##### Usage <a id="bloonstd6-getallheros-usage">
 ```javascript
-const BloonsTD6API = new GameAPICenter.BloonsTD6API();
+const BloonsTD6API = new BloonsTD6API();
 BloonsTD6API.GetAllHeros().then((data) => {
 // Your Code Here :D
 });
@@ -91,7 +91,7 @@ export type HeroID = "quincy" | "gwendolin" | "striker-jones" | "captain-churchi
 The GetHeroByID function returns a `Promise<Hero>` type
 ##### Usage <a id="bloonstd6-getherobyid-usage">
 ```javascript
-const BloonsTD6API = new GameAPICenter.BloonsTD6API();
+const BloonsTD6API = new BloonsTD6API();
 BloonsTD6API.GetHeroByID("quincy").then((data) => {
 // Your Code Here :D
 });
@@ -102,7 +102,7 @@ List all bloons in BTD6
 The GetAllBloons function returns a `Promise<Bloon[]>` type
 ##### Usage <a id="bloonstd6-getallbloons-usage">
 ```javascript
-const BloonsTD6API = new GameAPICenter.BloonsTD6API();
+const BloonsTD6API = new BloonsTD6API();
 BloonsTD6API.GetAllBloons().then((data) => {
 // Your Code Here :D
 });
@@ -120,7 +120,7 @@ export type BloonID = "red" | "blue" | "green" | "pink" | "black" | "white" | "p
 The GetBloonByID function returns a `Promise<Bloon>` type
 ##### Usage <a id="bloonstd6-getbloonbyid-usage">
 ```javascript
-const BloonsTD6API = new GameAPICenter.BloonsTD6API();
+const BloonsTD6API = new BloonsTD6API();
 BloonsTD6API.GetBloonByID("red").then((data) => {
 // Your Code Here :D
 });
@@ -128,7 +128,7 @@ BloonsTD6API.GetBloonByID("red").then((data) => {
 ### Return Types <a id="bloonstd6-returntypes">
 #### Tower <a id="bloonstd6-returntypes-tower">
 ```typescript
-export type Tower = {
+export interface Tower {
     id: number;
     name: string;
     description: string
@@ -140,14 +140,14 @@ export type Tower = {
         impoppable: number,
     };
     stats: {
-        damage: string;
-        pierce: string;
-        attackSpeed: string;
-        range: string;
-        type: string;
+        damage: string,
+        pierce: string,
+        attackSpeed: string,
+        range: string,
+        type: string,
     }
-    footprint: number;
-    defaultHotkey: string;
+    footprint: number,
+    defaultHotkey: string,
     paths: {
         path1: {
             crosspaths: {
@@ -164,23 +164,26 @@ export type Tower = {
                     reason: string,
                 }
             },
-            upgrades: [
-                {
-                    name: string,
-                    description: string,
-                    cost: {easy: number, medium: number, hard: number, impoppable: number},
-                    unlockXp: number,
-                    effects: string[],
-                    source: string
-                }
-            ]
+            upgrades: {
+                name: string,
+                description: string,
+                cost: {
+                    easy: number, 
+                    medium: number, 
+                    hard: number, 
+                    impoppable: number
+                },
+                unlockXp: number,
+                effects: string[],
+                source: string
+            }[]
         }
     }
 }
 ```
 #### Hero <a id="bloonstd6-returntypes-hero">
 ```typescript
-export type Hero = {
+export interface Hero {
     id: string,
     name: string,
     description: string,
@@ -193,11 +196,11 @@ export type Hero = {
         impoppable: number
     },
     stats: {
-        damage: string;
-        pierce: string;
-        attackSpeed: string;
-        range: string;
-        type: string;
+        damage: string,
+        pierce: string,
+        attackSpeed: string,
+        range: string,
+        type: string,
         special: {name: string, value: string}[],
     },
     unlock: {
@@ -217,7 +220,7 @@ export type Hero = {
 ```
 #### Bloon <a id="bloonstd6-returntypes-bloon">
 ```typescript
-export type Bloon = {
+export interface Bloon {
     id: string,
     name: string,
     type: string,
