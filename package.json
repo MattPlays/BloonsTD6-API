@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/MattPlays/BloonsTD6-API#readme",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "axios": "^0.22.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.22.5"
   }
 }

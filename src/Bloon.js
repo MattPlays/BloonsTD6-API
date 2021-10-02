@@ -6,12 +6,12 @@ class Bloon {
      * @param {string} type 
      * @param {number | object} rbe 
      * @param {number} speed 
-     * @param {string[] | []} types 
-     * @param {string[] | []} immunity 
-     * @param {{}[] | []} children 
-     * @param {{}[] | []} parents 
-     * @param {number | null} initalRound 
-     * @param {number  | null} initalRoundABR 
+     * @param {string[]} types 
+     * @param {string[]} immunity 
+     * @param {{id: string, count: number, type: string}[]} children 
+     * @param {{id: string}[]} parents 
+     * @param {number} [initalRound] 
+     * @param {number} [initalRoundABR] 
      * @returns {Bloon}
      */
     constructor(id, name, type, rbe, speed, types, immunity, children, parents, initalRound, initalRoundABR) {
@@ -22,20 +22,8 @@ class Bloon {
         this.speed = speed;
         this.types = types;
         this.immunity = immunity;
-        this.children = [];
-        children.forEach((child) => {
-            this.children.push({
-                id: child.id ?? "",
-                count: child.count ?? 0,
-                type: child.type ?? ""
-            });
-        });
-        this.parents = [];
-        parents.forEach((parent) => {
-            this.parents.push({
-                id: parent.id ?? "",
-            });
-        });
+        this.children = children;
+        this.parents = parents;
         this.initalRound = initalRound ?? null;
         this.initalRoundABR = initalRoundABR ?? null;
     }

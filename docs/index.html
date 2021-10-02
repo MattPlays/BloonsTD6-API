@@ -1,0 +1,225 @@
+<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>@mattplays/bloonstd6-api</title><meta name="description" content="Documentation for @mattplays/bloonstd6-api"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@mattplays/bloonstd6-api</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@mattplays/bloonstd6-api</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#bloonstd6-api" id="bloonstd6-api" style="color: inherit; text-decoration: none;">
+  <h1>BloonsTD6-API</h1>
+</a>
+<p>This package is a wrapper for the unofficial Bloons TD 6 API</p>
+<ol>
+<li><a href="#bloonstd6">Bloons TD 6</a><ol>
+<li><a href="#bloonstd6-usage">Usage</a></li>
+<li><a href="#bloonstd6-functions">Functions</a><ol>
+<li><a href="#bloonstd6-getalltowers">GetAllTowers</a><ol>
+<li><a href="#bloonstd6-getalltowers-output">Output</a></li>
+<li><a href="#bloonstd6-getalltowers-usage">Usage</a></li>
+</ol>
+</li>
+<li><a href="#bloonstd6-gettowerbyid">GetTowerByID</a><ol>
+<li><a href="#bloonstd6-gettowerbyid-input">Input</a></li>
+<li><a href="#bloonstd6-gettowerbyid-output">Output</a></li>
+<li><a href="#bloonts6-gettowerbyid-usage">Usage</a></li>
+</ol>
+</li>
+<li><a href="#bloonstd6-getallheros">GetAllHeros</a><ol>
+<li><a href="#bloonstd6-getallheros-output">Output</a></li>
+<li><a href="#bloonstd6-getallheros-usage">Usage</a></li>
+</ol>
+</li>
+<li><a href="#bloonstd6-getherobyid">GetHeroByID</a><ol>
+<li><a href="#bloonstd6-getherobyid-input">Input</a></li>
+<li><a href="#bloonstd6-getherobyid-output">Output</a></li>
+<li><a href="#bloonstd6-getherobyid-usage">Usage</a></li>
+</ol>
+</li>
+<li><a href="#bloonstd6-getallbloons">GetAllBloons</a><ol>
+<li><a href="#bloonstd6-getallbloons-output">Output</a></li>
+<li><a href="#bloonstd6-getallbloons-usage">Usage</a></li>
+</ol>
+</li>
+<li><a href="#bloonstd6-getbloonbyid">GetBloonByID</a><ol>
+<li><a href="#bloonstd6-getbloonbyid-input">Input</a></li>
+<li><a href="#bloonstd6-getbloonbyid-output">Output</a></li>
+<li><a href="#bloonstd6-getbloonbyid-usage">Usage</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+<a href="#bloons-td-6-" id="bloons-td-6-" style="color: inherit; text-decoration: none;">
+  <h2>Bloons TD 6 <a id="bloonstd6"></h2>
+</a>
+<p><strong>This is an Unoffical API</strong> <a href="https://statsnite.com/btd/api">Unoffical API Docs</a></p>
+
+<a href="#usage-" id="usage-" style="color: inherit; text-decoration: none;">
+  <h3>Usage <a id="bloonstd6-usage"></h3>
+</a>
+<pre><code class="language-javascript"><span class="hl-0">const</span><span class="hl-1"> {</span><span class="hl-2">BloonsTD6API</span><span class="hl-1">} = </span><span class="hl-3">require</span><span class="hl-1">(</span><span class="hl-4">&quot;@mattplays/bloonstd6-api&quot;</span><span class="hl-1">);</span><br/><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">BloonsTD6API</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">BloonsTD6API</span><span class="hl-1">(); </span><span class="hl-5">//No API Key Required</span>
+</code></pre>
+
+<a href="#functions-" id="functions-" style="color: inherit; text-decoration: none;">
+  <h3>Functions <a id="bloonstd6-functions"></h3>
+</a>
+
+<a href="#getalltowers-" id="getalltowers-" style="color: inherit; text-decoration: none;">
+  <h4>GetAllTowers <a id="bloonstd6-getalltowers"></h4>
+</a>
+<p>List all towers in BTD6</p>
+
+<a href="#output-" id="output-" style="color: inherit; text-decoration: none;">
+  <h5>Output <a id="bloonstd6-getalltowers-output"></h5>
+</a>
+<p>The GetAllTowers function returns a <code>Promise&lt;Tower[]&gt;</code> type</p>
+
+<a href="#usage--1" id="usage--1" style="color: inherit; text-decoration: none;">
+  <h5>Usage <a id="bloonstd6-getalltowers-usage"></h5>
+</a>
+<pre><code class="language-javascript"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">BloonsTD6API</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">BloonsTD6API</span><span class="hl-1">();</span><br/><span class="hl-6">BloonsTD6API</span><span class="hl-1">.</span><span class="hl-3">GetAllTowers</span><span class="hl-1">().</span><span class="hl-3">then</span><span class="hl-1">((</span><span class="hl-6">data</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-5">// Your Code Here :D</span><br/><span class="hl-1">});</span>
+</code></pre>
+
+<a href="#gettowerbyid-" id="gettowerbyid-" style="color: inherit; text-decoration: none;">
+  <h4>GetTowerByID <a id="bloonstd6-gettowerbyid"></h4>
+</a>
+<p>Get a specific tower in BTD6.</p>
+
+<a href="#input-" id="input-" style="color: inherit; text-decoration: none;">
+  <h5>Input <a id="bloonstd6-gettowerbyid-input"></h5>
+</a>
+<pre><code class="language-typescript"><span class="hl-7">export</span><span class="hl-1"> </span><span class="hl-0">type</span><span class="hl-1"> </span><span class="hl-8">TowerID</span><span class="hl-1"> = </span><span class="hl-4">&quot;dart-monkey&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;boomerang-monkey&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;bomb-shooter&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;tack-shooter&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;ice-monkey&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;glue-gunner&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;sniper-monkey&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;monkey-sub&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;monkey-buccaneer&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;monkey-ace&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;heli-pilot&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;mortar-monkey&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;dartling-gunner&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;wizard-monkey&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;super-monkey&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;ninja-monkey&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;alchemist&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;druid&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;banana-farm&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;spike-factory&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;monkey-village&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;engineer-monkey&quot;</span><span class="hl-1">;</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>towerID</td>
+<td><code>TowerID</code></td>
+<td>Yes</td>
+<td>a Tower ID ie. &#39;dart-monkey&#39;, &#39;super-monkey&#39;</td>
+</tr>
+</tbody></table>
+
+<a href="#output--1" id="output--1" style="color: inherit; text-decoration: none;">
+  <h5>Output <a id="bloonstd6-gettowerbyid-output"></h5>
+</a>
+<p>The GetTowerByID function returns a <code>Promise&lt;Tower&gt;</code> type</p>
+
+<a href="#usage--2" id="usage--2" style="color: inherit; text-decoration: none;">
+  <h5>Usage <a id="bloonstd6-gettowerbyid-usage"></h5>
+</a>
+<pre><code class="language-javascript"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">BloonsTD6API</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">BloonsTD6API</span><span class="hl-1">();</span><br/><span class="hl-6">BloonsTD6API</span><span class="hl-1">.</span><span class="hl-3">GetTowerByID</span><span class="hl-1">(</span><span class="hl-4">&quot;dart-monkey&quot;</span><span class="hl-1">).</span><span class="hl-3">then</span><span class="hl-1">((</span><span class="hl-6">data</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-5">// Your Code Here :D</span><br/><span class="hl-1">});</span>
+</code></pre>
+
+<a href="#getallheros-" id="getallheros-" style="color: inherit; text-decoration: none;">
+  <h4>GetAllHeros <a id="bloonstd6-getallheros"></h4>
+</a>
+<p>List all Heros in BTD6.</p>
+
+<a href="#output--2" id="output--2" style="color: inherit; text-decoration: none;">
+  <h5>Output <a id="bloonstd6-getallheros-output"></h5>
+</a>
+<p>The GetAllHeros function returns a <code>Promise&lt;Hero[]&gt;</code> type</p>
+
+<a href="#usage--3" id="usage--3" style="color: inherit; text-decoration: none;">
+  <h5>Usage <a id="bloonstd6-getallheros-usage"></h5>
+</a>
+<pre><code class="language-javascript"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">BloonsTD6API</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">BloonsTD6API</span><span class="hl-1">();</span><br/><span class="hl-6">BloonsTD6API</span><span class="hl-1">.</span><span class="hl-3">GetAllHeros</span><span class="hl-1">().</span><span class="hl-3">then</span><span class="hl-1">((</span><span class="hl-6">data</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-5">// Your Code Here :D</span><br/><span class="hl-1">});</span>
+</code></pre>
+
+<a href="#getherobyid-" id="getherobyid-" style="color: inherit; text-decoration: none;">
+  <h4>GetHeroByID <a id="bloonstd6-getherobyid"></h4>
+</a>
+<p>Get a specific Hero in BTD6.</p>
+
+<a href="#input--1" id="input--1" style="color: inherit; text-decoration: none;">
+  <h5>Input <a id="bloonstd6-getherobyid-input"></h5>
+</a>
+<pre><code class="language-typescript"><span class="hl-7">export</span><span class="hl-1"> </span><span class="hl-0">type</span><span class="hl-1"> </span><span class="hl-8">HeroID</span><span class="hl-1"> = </span><span class="hl-4">&quot;quincy&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;gwendolin&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;striker-jones&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;captain-churchill&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;benjamin&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;ezili&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;pat-fusty&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;adora&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;admiral-brickell&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;etienne&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;sauda&quot;</span><span class="hl-1">;</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>heroID</td>
+<td><code>HeroID</code></td>
+<td>Yes</td>
+<td>a Hero ID ie. &#39;quincy&#39;</td>
+</tr>
+</tbody></table>
+
+<a href="#output--3" id="output--3" style="color: inherit; text-decoration: none;">
+  <h5>Output <a id="bloonstd6-getherobyid-output"></h5>
+</a>
+<p>The GetHeroByID function returns a <code>Promise&lt;Hero&gt;</code> type</p>
+
+<a href="#usage--4" id="usage--4" style="color: inherit; text-decoration: none;">
+  <h5>Usage <a id="bloonstd6-getherobyid-usage"></h5>
+</a>
+<pre><code class="language-javascript"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">BloonsTD6API</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">BloonsTD6API</span><span class="hl-1">();</span><br/><span class="hl-6">BloonsTD6API</span><span class="hl-1">.</span><span class="hl-3">GetHeroByID</span><span class="hl-1">(</span><span class="hl-4">&quot;quincy&quot;</span><span class="hl-1">).</span><span class="hl-3">then</span><span class="hl-1">((</span><span class="hl-6">data</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-5">// Your Code Here :D</span><br/><span class="hl-1">});</span>
+</code></pre>
+
+<a href="#getallbloons-" id="getallbloons-" style="color: inherit; text-decoration: none;">
+  <h4>GetAllBloons <a id="bloonstd6-getallbloons"></h4>
+</a>
+<p>List all bloons in BTD6</p>
+
+<a href="#output--4" id="output--4" style="color: inherit; text-decoration: none;">
+  <h5>Output <a id="bloonstd6-getallbloons-output"></h5>
+</a>
+<p>The GetAllBloons function returns a <code>Promise&lt;Bloon[]&gt;</code> type</p>
+
+<a href="#usage--5" id="usage--5" style="color: inherit; text-decoration: none;">
+  <h5>Usage <a id="bloonstd6-getallbloons-usage"></h5>
+</a>
+<pre><code class="language-javascript"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">BloonsTD6API</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">BloonsTD6API</span><span class="hl-1">();</span><br/><span class="hl-6">BloonsTD6API</span><span class="hl-1">.</span><span class="hl-3">GetAllBloons</span><span class="hl-1">().</span><span class="hl-3">then</span><span class="hl-1">((</span><span class="hl-6">data</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-5">// Your Code Here :D</span><br/><span class="hl-1">});</span>
+</code></pre>
+
+<a href="#getbloonbyid-" id="getbloonbyid-" style="color: inherit; text-decoration: none;">
+  <h4>GetBloonByID <a id="bloonstd6-getbloonbyid"></h4>
+</a>
+<p>Get a specific Bloon in BTD6.</p>
+
+<a href="#input--2" id="input--2" style="color: inherit; text-decoration: none;">
+  <h5>Input <a id="bloonstd6-getbloonbyid-input"></h5>
+</a>
+<pre><code class="language-typescript"><span class="hl-7">export</span><span class="hl-1"> </span><span class="hl-0">type</span><span class="hl-1"> </span><span class="hl-8">BloonID</span><span class="hl-1"> = </span><span class="hl-4">&quot;red&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;blue&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;green&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;pink&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;black&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;white&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;purple&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;lead&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;zebra&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;rainbow&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;ceramic&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;golden&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;ghost&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;moab&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;bfb&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;zomg&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;bad&quot;</span><span class="hl-1"> | </span><span class="hl-4">&quot;ddt&quot;</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bloonID</td>
+<td><code>BloonID</code></td>
+<td>Yes</td>
+<td>a Bloon ID ie. &#39;red&#39;, &#39;blue&#39;</td>
+</tr>
+</tbody></table>
+
+<a href="#output--5" id="output--5" style="color: inherit; text-decoration: none;">
+  <h5>Output <a id="bloonstd6-getbloonbyid-output"></h5>
+</a>
+<p>The GetBloonByID function returns a <code>Promise&lt;Bloon&gt;</code> type</p>
+
+<a href="#usage--6" id="usage--6" style="color: inherit; text-decoration: none;">
+  <h5>Usage <a id="bloonstd6-getbloonbyid-usage"></h5>
+</a>
+<pre><code class="language-javascript"><span class="hl-0">const</span><span class="hl-1"> </span><span class="hl-2">BloonsTD6API</span><span class="hl-1"> = </span><span class="hl-0">new</span><span class="hl-1"> </span><span class="hl-3">BloonsTD6API</span><span class="hl-1">();</span><br/><span class="hl-6">BloonsTD6API</span><span class="hl-1">.</span><span class="hl-3">GetBloonByID</span><span class="hl-1">(</span><span class="hl-4">&quot;red&quot;</span><span class="hl-1">).</span><span class="hl-3">then</span><span class="hl-1">((</span><span class="hl-6">data</span><span class="hl-1">) </span><span class="hl-0">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-5">// Your Code Here :D</span><br/><span class="hl-1">});</span>
+</code></pre>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-class"><a href="classes/BloonsTD6API.html" class="tsd-kind-icon">BloonsTD6API</a></li><li class="tsd-kind-interface"><a href="interfaces/Bloon.html" class="tsd-kind-icon">Bloon</a></li><li class="tsd-kind-interface"><a href="interfaces/Hero.html" class="tsd-kind-icon">Hero</a></li><li class="tsd-kind-interface"><a href="interfaces/Tower.html" class="tsd-kind-icon">Tower</a></li><li class="tsd-kind-type-alias"><a href="modules.html#BloonID" class="tsd-kind-icon">BloonID</a></li><li class="tsd-kind-type-alias"><a href="modules.html#HeroID" class="tsd-kind-icon">HeroID</a></li><li class="tsd-kind-type-alias"><a href="modules.html#TowerID" class="tsd-kind-icon">TowerID</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li><li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>

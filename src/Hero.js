@@ -5,7 +5,7 @@ class Hero {
      * @param {string} name 
      * @param {string} description 
      * @param {number[]} skinChange 
-     * @param {{}[] | []} skins 
+     * @param {{id: string, name: string}[]} skins 
      * @param {{easy: number, medium: number, hard: number, impoppable: number}} cost 
      * @param {{damage: string, pierce: string, attackSpeed: string, range: string, type: string, special: string[] }} stats 
      * @param {{how: string, value: string}} unlock 
